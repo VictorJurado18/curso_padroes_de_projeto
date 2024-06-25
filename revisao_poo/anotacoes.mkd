@@ -1,0 +1,59 @@
+## Revisão sobre Programação Orientada a Objetos.
+
+Objetos contém atributos e métodos.
+
+Estes métodos são responsáveis pela manipulação dos atributos.
+
+---
+
+```python
+class Carro:
+
+    def __init__(self, is_sedan: bool = False):
+        self.__is_sedan = is_sedan #atributo
+        self.__velocidade = 0 #atributo
+        self.__motorista = None #atributo
+
+    def dirigir(self, motorista: Pessoa): #metodo
+        self.__motorista = motorista
+        self.acelerar(1)
+
+    def acelerar(self, velocidade: int):#metodo
+        self.__velocidade += velocidade
+
+    def parar(self): #metodo
+        self.__velocidade = 0
+```
+
+No exemplo acima temos uma classe Carro com os atributos "is_sedan" e "velocidade" e os métodos "acelerar" e "parar".
+
+### Classes:
+
+- Ajudam os desenvolvedores a representar entidade do mundo real;
+
+- Definem os objetos com atributos e comportamentos (métodos);
+
+- Classes possuem construtores (método especial) que proporcionam o estado inicial para os objetos;
+
+- Classes são como templates (modelos), portanto, podem ser facilmente reutilizadas;
+
+### Atributos:
+
+- Definem as características que nos ajudam a modelar/mapear o objeto através da classe;
+
+- São conhecidos como membros-dados na orientação a objetos;
+
+### Métodos:
+
+- Representam o comportamento dos objetos, ou seja, as ações que estes objetos podem praticar;
+
+- Os métodos atuam nos atributos além de implementar a funcionalidade desejada para o objeto;
+
+### Objetos:
+
+- Representam entidades no contexto da aplicação em desenvolvimento;
+- Entidades interagem entre si para resolver problemas do mundo real;
+
+Exemplo:
+Pessoa é uma entidade e Carro também é uma entidade.
+Pessoa dirige Carro para se deslocar de um lugar para outro.
